@@ -82,7 +82,7 @@ namespace Ejercicio2
                 }
 
                 aux = null;
-                return valor;
+            
             }
 
             public bool EsCapicua()
