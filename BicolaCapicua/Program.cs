@@ -117,7 +117,9 @@ namespace Ejercicio2
                     if (bicolaCapicua.EsCapicua())
                         Console.WriteLine("El número es capicúa.");
                     else
-                        
+                        Console.WriteLine("El número no es capicúa.");
+
+
                 }
             }
         }
