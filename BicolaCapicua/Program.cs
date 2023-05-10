@@ -11,78 +11,12 @@ namespace Ejercicio2
     {
         class Node
         {
-            public int DatoInt { get; set; }
-            public Node Siguiente { get; set; }
-            public Node Anterior { get; set; }
+         
         }
 
         class Bicola
         {
-            public Node Frente { get; set; }
-            public Node Final { get; set; }
-
-            public Bicola()
-            {
-                this.Frente = this.Final = null;
-            }
-
-            public void EncolarFrenteInt(int valor)
-            {
-                Node NuevoBC = new Node();
-                NuevoBC.DatoInt = valor;
-                NuevoBC.Anterior = null;
-
-                if (this.Frente == null)
-                {
-                    this.Final = NuevoBC;
-                    NuevoBC.Anterior = null;
-                }
-                else
-                {
-                    this.Frente.Anterior = NuevoBC;
-                    NuevoBC.Siguiente = this.Frente;
-                }
-                this.Frente = NuevoBC;
-            }
-
-            public int DesencolarFinalInt()
-            {
-                Node aux = this.Final;
-                int valor = aux.DatoInt;
-                if (this.Frente == this.Final)
-                {
-                    this.Frente = null;
-                    this.Final = null;
-                }
-                else
-                {
-                    this.Final = this.Final.Anterior;
-                    this.Final.Siguiente = null;
-                }
-
-                aux = null;
-                return valor;
-            }
-
-            public int DesencolarFrenteInt()
-            {
-                Node aux = this.Frente;
-                int valor = aux.DatoInt;
-
-                if (this.Frente == this.Final)
-                {
-                    this.Frente = null;
-                    this.Final = null;
-                }
-                else
-                {
-                    this.Frente = this.Frente.Siguiente;
-                    this.Frente.Anterior = null;
-                }
-
-                aux = null;
-                return valor;
-            }
+           
 
             public bool EsCapicua()
             {
