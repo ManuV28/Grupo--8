@@ -11,6 +11,7 @@ namespace Ejercicio2
     {
         class Node
         {
+            int node;
             
         }
 
