@@ -11,10 +11,10 @@ namespace Ejercicio2
     {
         class Node
         {
-        public int DatoInt { get; set; }
+            public int DatoInt { get; set; }
 
-        public Node Siguiente { get; set; }
-        public Node Anterior { get; set; }
+            public Node Siguiente { get; set; }
+            public Node Anterior { get; set; }
 
         }
 
@@ -34,17 +34,17 @@ namespace Ejercicio2
                 NuevoBC.DatoInt = valor;
                 NuevoBC.Anterior = null;
 
-                if(this.Frente==null)
+                if (this.Frente == null)
                 {
                     this.Final = NuevoBC;
                     NuevoBC.Anterior = null;
                 }
                 else
                 {
-                    this.Frente.Anterior= NuevoBC;
-                    NuevoBC.Siguiente=this.Frente;
+                    this.Frente.Anterior = NuevoBC;
+                    NuevoBC.Siguiente = this.Frente;
                 }
-                this.Frente=NuevoBC;
+                this.Frente = NuevoBC;
             }
             public int DesencolarFinalInt()
             {
@@ -64,7 +64,25 @@ namespace Ejercicio2
 
                 aux = null;
                 return valor;
+            }
+            public int DesencolarFrenteInt()
+            {
+                Node aux = this.Frente;
+                int valor = aux.DatoInt;
 
+                if (this.Frente == this.Final)
+                {
+                    this.Frente = null;
+                    this.Final = null;
+                }
+                else
+                {
+                    this.Frente = this.Frente.Siguiente;
+                    this.Frente.Anterior = null;
+                }
+
+                aux = null;
+                return valor;
             }
 
             public bool EsCapicua()
