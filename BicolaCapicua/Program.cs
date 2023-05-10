@@ -12,10 +12,7 @@ namespace Ejercicio2
         class Node
         {
 
-            public int DatoInt { get; set; }
-            public Node Siguiente { get; set; }
-            public Node Anterior { get; set;}
-            }
+        }
 
             int node;
         }
