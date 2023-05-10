@@ -28,6 +28,24 @@ namespace Ejercicio2
                 this.Frente = this.Final = null;
             }
 
+            public void EncolarFrenteInt(int valor)
+            {
+                Node NuevoBC = new Node();
+                NuevoBC.DatoInt = valor;
+                NuevoBC.Anterior = null;
+
+                if(this.Frente==null)
+                {
+                    this.Final = NuevoBC;
+                    NuevoBC.Anterior = null;
+                }
+                else
+                {
+                    this.Frente.Anterior= NuevoBC;
+                    NuevoBC.Siguiente=this.Frente;
+                }
+                this.Frente=NuevoBC;
+            }
 
             public bool EsCapicua()
             {
