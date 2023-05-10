@@ -33,8 +33,7 @@ namespace Ejercicio2
 
                 if (this.Frente == null)
                 {
-                    this.Final = NuevoBC;
-                    NuevoBC.Anterior = null;
+                    
                 }
                 else
                 {
