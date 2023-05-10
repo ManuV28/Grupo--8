@@ -11,7 +11,7 @@ namespace Ejercicio2
     {
         class Node
         {
-            manuel kbro
+          
         }
 
         class Bicola
