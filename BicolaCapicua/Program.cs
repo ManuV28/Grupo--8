@@ -11,12 +11,8 @@ namespace Ejercicio2
     {
         class Node
         {
-            hola
-        }
 
-            int node;
         }
-
 
         class Bicola
         {
