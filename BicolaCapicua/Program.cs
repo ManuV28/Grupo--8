@@ -46,6 +46,26 @@ namespace Ejercicio2
                 }
                 this.Frente=NuevoBC;
             }
+            public int DesencolarFinalInt()
+            {
+                Node aux = this.Final;
+                int valor = aux.DatoInt;
+                if (this.Frente == this.Final)
+                {
+                    this.Frente = null;
+                    this.Final = null;
+                }
+                else
+                {
+                    this.Final = this.Final.Anterior;
+                    this.Final.Siguiente = null;
+
+                }
+
+                aux = null;
+                return valor;
+
+            }
 
             public bool EsCapicua()
             {
