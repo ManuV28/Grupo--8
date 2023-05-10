@@ -20,7 +20,14 @@ namespace Ejercicio2
 
         class Bicola
         {
-           
+            public Node Frente { get; set; }
+            public Node Final { get; set; }
+
+            public Bicola()
+            {
+                this.Frente = this.Final = null;
+            }
+
 
             public bool EsCapicua()
             {
